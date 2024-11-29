@@ -22,12 +22,13 @@ public class Uso_Empleado {
          */
 
         //Creamos un array para almacenar a los empleados.
-        Empleado [] misEmpleados = new Empleado[3];
+        Empleado [] misEmpleados = new Empleado[4];
         //ArrayList<Empleado> misEmpleados = new ArrayList<>();
 
         misEmpleados[0] = new Empleado("Paco Gomez", 85000, 1990, 12, 17);
         misEmpleados[1] = new Empleado("Ana Lopez", 95000, 1995, 6, 2);
         misEmpleados[2] = new Empleado("Maria Martin", 105000, 2002, 3, 15);
+        misEmpleados[3] = new Empleado("Antonio Fernandez");
 
         //Para subirle el sueldo a los tres empleados.
         /*for (int i = 0; i < misEmpleados.length; i++) {
@@ -63,6 +64,12 @@ class Empleado {
         GregorianCalendar calendario = new GregorianCalendar(agno, mes-1, dia);
         this.altaContrato = calendario.getTime();
 
+    }
+
+    //Sobrecarga de constructores significa que una clase puede tener varios constructores.
+    //Con el this() llama al primer constrcutor pero utiliza el nom de este segundo constructor, y lo demás utiliza los parámetros del anterior.
+    public Empleado(String nom){
+        this(nom, 30000, 2000, 01, 01);
     }
 
     public String getNombre(){  //Getter para obtener el nombre.
