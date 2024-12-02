@@ -6,7 +6,7 @@ public class Uso_Tiempo {
         Tiempo t1 = new Tiempo(1,70,30);
         Tiempo t2 = new Tiempo(1,50,63);
 
-        //De esta forma para guardarlo en un nuevo objeto, tinees que iunstanciar el objeto y gguardar en el la suma.
+        //De esta forma para guardarlo en un nuevo objeto, tinees que iunstanciar el objeto y gguardar en el la suma
         Tiempo t3 = t1.sumar(t1, t2);
         System.out.println(t3.getHoras()+" h "+t3.getMinutos()+" m "+t3.getSegundos()+" s ");
 
