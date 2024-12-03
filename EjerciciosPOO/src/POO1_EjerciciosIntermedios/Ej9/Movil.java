@@ -2,33 +2,52 @@ package POO1_EjerciciosIntermedios.Ej9;
 
 public class Movil extends Terminal {
     private String tipo;
-    private int conversacion;
     private double tarificacion;
 
     public Movil(int numero ,String tipo){
         super(numero);
         this.tipo = tipo;
         this.conversacion = 0;
-        this.tarificacion = 0;
+
     }
 
-    public void llamada(Movil terminal, int tiempoLlamada){
-        conversacion += tiempoLlamada;
-        terminal.conversacion += tiempoLlamada;
+    @Override
+    public void llamada(Terminal terminal, int segundosLLamada){
 
-        if (this.tipo== "rata"){
-            this.tarificacion = (tiempoLlamada / 60) * 6;
-        } else if (this.tipo == "mono") {
-            this.tarificacion = (tiempoLlamada / 60) * 12;
-        } else if (this.tipo == "bisonte") {
-            this.tarificacion = (tiempoLlamada / 60) * 30;
-        }else {
-            System.out.println("Opción no válida.");
+        super.llamada(terminal, segundosLLamada);
+
+        conversacion += segundosLLamada;
+        terminal.conversacion += segundosLLamada;
+
+        double minutos = (double) segundosLLamada / 60;
+
+        if (this.tipo == "rata"){
+            this.tarificacion += minutos * 0.06;
         }
+        if (this.tipo == "mono") {
+            this.tarificacion += minutos * 0.12;
+        }
+        if (this.tipo == "bisonte") {
+            this.tarificacion += minutos * 0.30;
+        }
+
+        /*switch (this.tipo) {
+            case "rata":
+                this.tarificacion += minutos*0.06;
+                break;
+            case "mono":
+                this.tarificacion += minutos*0.12;
+                break;
+            case "bisonte":
+                this.tarificacion += minutos*0.30;
+                break;
+            default:
+        }*/
+
     }
 
     @Override
     public String toString() {
-        return "Nº: "+ numero+" - "+conversacion+" segundos de conversación - tarificados: "+tarificacion+" euros.";
+        return "Nº: "+ this.numero+" - "+this.conversacion+" segundos de conversación - tarificados: "+this.tarificacion+" euros.";
     }
 }

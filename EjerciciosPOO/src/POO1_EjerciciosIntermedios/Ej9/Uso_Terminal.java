@@ -1,6 +1,5 @@
 package POO1_EjerciciosIntermedios.Ej9;
 
-import POO1_EjerciciosIntermedios.Ej8.Terminal;
 
 import java.util.Scanner;
 
@@ -9,6 +8,8 @@ public class Uso_Terminal {
         Terminal t1 = new Terminal(612214589);
         Terminal t2 = new Terminal(798765432);
         Terminal t3 = new Terminal(814256987);
+
+
 
         Scanner sc = new Scanner(System.in);
 

@@ -9,9 +9,9 @@ public class Terminal {
         this.conversacion = 0;
     }
 
-    public void llamada(Terminal terminal, int tiempoLlamada){
-        conversacion += tiempoLlamada;
-        terminal.conversacion += tiempoLlamada;
+    public void llamada(Terminal terminal, int segundosLLamada){
+        conversacion += segundosLLamada;
+        terminal.conversacion += segundosLLamada;
     }
 
     @Override

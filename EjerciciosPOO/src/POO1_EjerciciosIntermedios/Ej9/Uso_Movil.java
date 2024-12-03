@@ -11,7 +11,7 @@ public class Uso_Movil {
         System.out.println(m3);
 
         System.out.println("Tiempo de llamada...");
-        m1.llamada(m2, 200);
+        m1.llamada(m2, 320);
 
 
         System.out.println(m1);
@@ -19,13 +19,13 @@ public class Uso_Movil {
         System.out.println(m3);
 
         System.out.println("Tiempo de llamada...");
-        m2.llamada(m1, 60);
+        m1.llamada(m3, 200);
         System.out.println(m1);
         System.out.println(m2);
         System.out.println(m3);
 
         System.out.println("Tiempo de llamada...");
-        m3.llamada(m1, 180);
+        m2.llamada(m3, 550);
         System.out.println(m1);
         System.out.println(m2);
         System.out.println(m3);
