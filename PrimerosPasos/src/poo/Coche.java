@@ -27,6 +27,7 @@ public class Coche {
                  peso_plataforma+ " kg";
      }
     //En principio vamos a poner que todos son de color azul.
+
      public void setColor(String color_coche){
          this.color = color_coche;
      }

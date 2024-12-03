@@ -1,6 +1,5 @@
 package poo;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -57,12 +56,16 @@ class Empleado {
     private String nombre;
     private double sueldo;
     private Date altaContrato;
+    private static int IdSiguiente;
+    private int Id;
 
     public Empleado(String nom, double sue, int agno, int mes, int dia){
         this.nombre = nom;
         this.sueldo = sue;
         GregorianCalendar calendario = new GregorianCalendar(agno, mes-1, dia);
         this.altaContrato = calendario.getTime();
+        ++ IdSiguiente;
+        Id = IdSiguiente;
 
     }
 
@@ -73,7 +76,7 @@ class Empleado {
     }
 
     public String getNombre(){  //Getter para obtener el nombre.
-        return nombre;
+        return nombre + " ID: "+ Id  ;
     }
 
     public double getSueldo(){  //Getter para obtener el sueldo.
@@ -87,5 +90,25 @@ class Empleado {
     public void subeSueldo(double porcentaje){  //Setter.
         double aumento = sueldo * (porcentaje/100);
         sueldo += aumento;
+    }
+}
+
+class Jefatura extends Empleado{
+
+    private double incentivo;
+
+    public Jefatura(String nom, double sue, int agno, int mes, int dia){
+        super(nom, sue, agno, mes, dia);
+
+    }
+
+    public void setIncentivo(double incentivoDado){
+        this.incentivo = incentivoDado;
+    }
+
+    @Override
+    public double getSueldo() {
+        double sueldoJefe = super.getSueldo();  //Utolizando el super decimos que llame al metodo de la clase padre (superclase).
+        return sueldoJefe + this.incentivo;
     }
 }
