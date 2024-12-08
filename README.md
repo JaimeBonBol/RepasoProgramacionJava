@@ -8,6 +8,11 @@ Entrada de datos.
 Variables.
 
 ### 2️⃣ ⇒ Condicionales y bucles.
+Condicionantes if, switch.
+Bucles for, while, for-each.
 
 ### 3️⃣ ⇒ Arrays.
+Array, ArrayList, ArrayBidimensional.
 
+### 4️⃣ ⇒ POO.
+Programación Orientada a Objetos.
