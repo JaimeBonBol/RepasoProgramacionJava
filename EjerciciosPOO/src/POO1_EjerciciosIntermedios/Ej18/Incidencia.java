@@ -24,12 +24,14 @@ public class Incidencia {
         return this.estadoPendiente = false;
     }
 
+
     public String getestadoPendiente(){
         if (this.estadoPendiente == true){
             return "Pendiente";
         }
         else {
-            return "Resuelta";
+            return "Resuelta - "+solucion;
+
         }
     }
 
@@ -39,6 +41,6 @@ public class Incidencia {
 
     @Override
     public String toString() {
-        return "Incidencia "+codigo+" - Puesto: "+ this.numPuesto+" - "+this.problema+" - "+getestadoPendiente()+" - "+ this.solucion;
+        return "Incidencia "+codigo+" - Puesto: "+ this.numPuesto+" - "+this.problema+" - "+getestadoPendiente();
     }
 }

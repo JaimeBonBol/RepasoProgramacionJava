@@ -9,6 +9,7 @@ public class Uso_Incidencia {
         Incidencia inc5 = new Incidencia(111, "Se cuelga al abrir 3 ventanas");
         inc2.resuelve("El equipo no estaba enchufado");
         inc3.resuelve("Cambio del cable VGA");
+        inc1.resuelve("Conexión por cable");
         System.out.println(inc1);
         System.out.println(inc2);
         System.out.println(inc3);
