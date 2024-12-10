@@ -21,19 +21,21 @@ public class Piramide {
     /**
      * Metodo para pintar la piramide.
      */
-    public void pintaPiramide(){
-        for (int i = 1; i < this.altura; i++) {
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= this.altura; i++) {
             //Imprimir los espacios antes de los asteriscos.
-            for (int j = i; j < this.altura-1; j++) {
-                System.out.print(" ");
+            for (int j = i; j < this.altura; j++) {
+                sb.append(" ");
             }
 
             //Imprimir los asteriscos en cada fila.
             for (int j = 0; j < ((2* i) -1); j++) {
-                System.out.print("*");
+                sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        return sb.toString();
     }
 
     /**
@@ -44,5 +46,3 @@ public class Piramide {
         return contajePiramides;
     }
 }
-
-

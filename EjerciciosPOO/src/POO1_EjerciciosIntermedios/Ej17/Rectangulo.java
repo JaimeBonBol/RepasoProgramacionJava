@@ -24,13 +24,15 @@ public class Rectangulo {
     /**
      * Metodo para pintar el rectangulo.
      */
-    public void pintaRectangulo(){
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < this.altura; i++) {
             for (int j = 0; j < this.base; j++) {
-                System.out.print("*");
+                sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        return sb.toString();
     }
 
     /**
