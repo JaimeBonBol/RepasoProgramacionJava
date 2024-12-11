@@ -20,14 +20,24 @@ public class Uso_Empleado {
 
          */
 
+        Jefatura jefeRRHH = new Jefatura("Juan",55000,2006,9,25);
+
+        jefeRRHH.setIncentivo(2570);
+
         //Creamos un array para almacenar a los empleados.
-        Empleado [] misEmpleados = new Empleado[4];
+        Empleado [] misEmpleados = new Empleado[6];
         //ArrayList<Empleado> misEmpleados = new ArrayList<>();
 
         misEmpleados[0] = new Empleado("Paco Gomez", 85000, 1990, 12, 17);
         misEmpleados[1] = new Empleado("Ana Lopez", 95000, 1995, 6, 2);
         misEmpleados[2] = new Empleado("Maria Martin", 105000, 2002, 3, 15);
         misEmpleados[3] = new Empleado("Antonio Fernandez");
+        misEmpleados[4] = jefeRRHH; //Polimorfismo en acción. Principio de sustitución.
+        misEmpleados[5] = new Jefatura("María",95000,1999,5,26);
+
+        Jefatura jefaFianzas = (Jefatura) misEmpleados[5];  //Casting de objeto.
+
+        jefaFianzas.setIncentivo(55000);
 
         //Para subirle el sueldo a los tres empleados.
         /*for (int i = 0; i < misEmpleados.length; i++) {
@@ -39,15 +49,16 @@ public class Uso_Empleado {
             e.subeSueldo(5);
         }
 
+        //Con un bucle for each.
+        for (Empleado e: misEmpleados){
+            System.out.println("Nombre: "+ e.getNombre()+ " Sueldo: "+e.getSueldo()+ " Fecha de alta: "+e.getAltaContrato());
+        }
+
         //Para imprimir por pantalla la informacion de los empleados.
         /*for (int i = 0; i < misEmpleados.length; i++) {
             System.out.println("Nombre: "+ misEmpleados[i].getNombre()+ " Sueldo: "+misEmpleados[i].getSueldo()+ " Fecha de alta: "+misEmpleados[i].getAltaContrato());
         }
          */
-        //Con un bucle for each.
-        for (Empleado e: misEmpleados){
-            System.out.println("Nombre: "+ e.getNombre()+ " Sueldo: "+e.getSueldo()+ " Fecha de alta: "+e.getAltaContrato());
-        }
     }
 }
 
@@ -108,7 +119,7 @@ class Jefatura extends Empleado{
 
     @Override
     public double getSueldo() {
-        double sueldoJefe = super.getSueldo();  //Utolizando el super decimos que llame al metodo de la clase padre (superclase).
+        double sueldoJefe = super.getSueldo();  //Utilizando el super decimos que llame al metodo de la clase padre (superclase).
         return sueldoJefe + this.incentivo;
     }
 }
