@@ -6,20 +6,6 @@ import java.util.GregorianCalendar;
 
 public class Uso_Empleado {
     public static void main(String[] args) {
-        /*
-        Empleado empleado1 = new Empleado("Paco Gomez",85000,1990,12,17);
-        Empleado empleado2 = new Empleado("Ana Lopez",95000,1995,6,2);
-        Empleado empleado3 = new Empleado("Maria Martin",105000,2002,3,15);
-
-        empleado1.subeSueldo(5);
-        empleado2.subeSueldo(5);
-        empleado3.subeSueldo(5);
-
-        System.out.println("Nombre: "+empleado1.getNombre()+ " Sueldo: "+empleado1.getSueldo()+" Fecha de alta: "+empleado1.getAltaContrato());
-        System.out.println("Nombre: "+empleado2.getNombre()+ " Sueldo: "+empleado2.getSueldo()+" Fecha de alta: "+empleado2.getAltaContrato());
-        System.out.println("Nombre: "+empleado3.getNombre()+ " Sueldo: "+empleado3.getSueldo()+" Fecha de alta: "+empleado3.getAltaContrato());
-
-         */
 
         Jefatura jefeRRHH = new Jefatura("Juan",55000,2006,9,25);
 
@@ -40,19 +26,16 @@ public class Uso_Empleado {
 
         jefaFianzas.setIncentivo(55000);
 
-        //Para subirle el sueldo a los tres empleados.
-        /*for (int i = 0; i < misEmpleados.length; i++) {
-            misEmpleados[i].subeSueldo(5);
-        }
-         */
-        //Con un bucle for each.
+        System.out.println(jefaFianzas.tomarDecisiones("Dar más días de vaciones a los empleados."));
+
+        //Con un bucle for each subimos el sueldo.
         for (Empleado e: misEmpleados){
             e.subeSueldo(5);
         }
 
         Arrays.sort(misEmpleados);
 
-        //Con un bucle for each.
+        //Con un bucle for each para mostrar por pantalla la información de los empleados.
         for (Empleado e: misEmpleados){
             System.out.println("Nombre: "+ e.getNombre()+ " Sueldo: "+e.getSueldo()+ " Fecha de alta: "+e.getAltaContrato());
         }
@@ -119,13 +102,18 @@ class Empleado implements Comparable {
     }
 }
 
-class Jefatura extends Empleado{
+class Jefatura extends Empleado implements Jefes{
 
     private double incentivo;
 
     public Jefatura(String nom, double sue, int agno, int mes, int dia){
         super(nom, sue, agno, mes, dia);
 
+    }
+
+    @Override
+    public String tomarDecisiones(String decision) {
+        return  "Un miembro de la dirección ha tomado la decisión de: "+decision;
     }
 
     public void setIncentivo(double incentivoDado){
