@@ -1,5 +1,6 @@
 package poo;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -49,6 +50,8 @@ public class Uso_Empleado {
             e.subeSueldo(5);
         }
 
+        Arrays.sort(misEmpleados);
+
         //Con un bucle for each.
         for (Empleado e: misEmpleados){
             System.out.println("Nombre: "+ e.getNombre()+ " Sueldo: "+e.getSueldo()+ " Fecha de alta: "+e.getAltaContrato());
@@ -62,7 +65,7 @@ public class Uso_Empleado {
     }
 }
 
-class Empleado {
+class Empleado implements Comparable {
 
     private String nombre;
     private double sueldo;
@@ -101,6 +104,18 @@ class Empleado {
     public void subeSueldo(double porcentaje){  //Setter.
         double aumento = sueldo * (porcentaje/100);
         sueldo += aumento;
+    }
+
+    public int  compareTo(Object miObjeto){
+        Empleado otroEmpleado = (Empleado) miObjeto;
+
+        if (this.sueldo < otroEmpleado.sueldo){
+            return -1;
+        } else if (this.sueldo > otroEmpleado.sueldo) {
+            return +1;
+        }else {
+            return 0;
+        }
     }
 }
 
