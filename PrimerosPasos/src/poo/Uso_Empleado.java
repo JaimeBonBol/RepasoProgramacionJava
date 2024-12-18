@@ -28,6 +28,10 @@ public class Uso_Empleado {
 
         System.out.println(jefaFianzas.tomarDecisiones("Dar más días de vaciones a los empleados."));
 
+        System.out.println("El jefe "+jefaFianzas.getNombre()+" tiene un bonus de "+jefaFianzas.estabeleceBonus(500));
+
+        System.out.println("El empleado "+misEmpleados[3].getNombre()+" tiene un bonus de "+misEmpleados[3].estabeleceBonus(500));
+
         //Con un bucle for each subimos el sueldo.
         for (Empleado e: misEmpleados){
             e.subeSueldo(5);
@@ -48,7 +52,7 @@ public class Uso_Empleado {
     }
 }
 
-class Empleado implements Comparable {
+class Empleado implements Comparable, Trabajadores {
 
     private String nombre;
     private double sueldo;
@@ -70,6 +74,11 @@ class Empleado implements Comparable {
     //Con el this() llama al primer constrcutor pero utiliza el nom de este segundo constructor, y lo demás utiliza los parámetros del anterior.
     public Empleado(String nom){
         this(nom, 30000, 2000, 01, 01);
+    }
+
+    @Override
+    public double estabeleceBonus(double gratificacion) {
+        return Trabajadores.bonusBase + gratificacion;
     }
 
     public String getNombre(){  //Getter para obtener el nombre.
@@ -109,6 +118,12 @@ class Jefatura extends Empleado implements Jefes{
     public Jefatura(String nom, double sue, int agno, int mes, int dia){
         super(nom, sue, agno, mes, dia);
 
+    }
+
+    @Override
+    public double estabeleceBonus(double gratificacion) {
+        double prima = 2000;
+        return Trabajadores.bonusBase + gratificacion + prima;
     }
 
     @Override
