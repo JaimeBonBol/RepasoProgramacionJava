@@ -32,7 +32,5 @@ class DameLaHora implements ActionListener{
         Date ahora = new Date();
 
         System.out.println("Te pongo la hora cada 5 segundos: "+ahora);
-
-        Toolkit.getDefaultToolkit().beep();
     }
 }
