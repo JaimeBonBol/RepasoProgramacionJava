@@ -5,7 +5,7 @@ Este es un repositorio de repaso de Java.
 ## 📚 Índice de contenido.
 
 ### 1️⃣ ⇒ Introducción.
-Entrada de datos.
+Entrada de datos."\n"
 Variables.
 
 ### 2️⃣ ⇒ Condicionales y bucles.
