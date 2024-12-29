@@ -15,6 +15,7 @@ public class Marco extends JFrame{
         //setExtendedState(Frame.MAXIMIZED_BOTH); //Para abrir el marco a pantalla conpleta.
 
         setTitle("Mi ventana");
+        
     }
 
 }

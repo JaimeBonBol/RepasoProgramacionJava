@@ -10,5 +10,6 @@ public class CreandoMarcos {
         marco1.setVisible(true);    //Se puede poner en el constructor de la clase.
 
         marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //Se puede poner en el constructor de la clase.
+
     }
 }
