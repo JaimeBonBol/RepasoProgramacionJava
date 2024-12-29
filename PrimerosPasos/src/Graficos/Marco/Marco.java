@@ -1,7 +1,6 @@
-package Graficos;
+package Graficos.Marco;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Marco extends JFrame{
 

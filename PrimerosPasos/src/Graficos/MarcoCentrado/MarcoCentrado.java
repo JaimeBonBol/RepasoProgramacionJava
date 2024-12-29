@@ -1,4 +1,4 @@
-package Graficos;
+package Graficos.MarcoCentrado;
 
 import javax.swing.*;
 import java.awt.*;

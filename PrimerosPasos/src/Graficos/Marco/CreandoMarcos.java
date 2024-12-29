@@ -1,4 +1,4 @@
-package Graficos;
+package Graficos.Marco;
 
 import javax.swing.*;
 

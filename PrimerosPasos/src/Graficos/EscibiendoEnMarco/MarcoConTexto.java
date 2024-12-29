@@ -1,4 +1,4 @@
-package Graficos;
+package Graficos.EscibiendoEnMarco;
 
 import javax.swing.*;
 
