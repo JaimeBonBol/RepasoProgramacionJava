@@ -2,10 +2,10 @@ package Graficos.PruebaDibujoJava2D;
 
 import javax.swing.*;
 
-public class PruebaDibujo {
+public class PruebaDibujoJava2D {
     public static void main(String[] args) {
 
-        MarcoConDibujos miMarco = new MarcoConDibujos();
+        MarcoConDibujosJava2D miMarco = new MarcoConDibujosJava2D();
 
         miMarco.setVisible(true);
 

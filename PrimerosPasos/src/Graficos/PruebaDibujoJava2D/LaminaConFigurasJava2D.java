@@ -6,7 +6,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 
-public class LaminaConFiguras extends JPanel {
+public class LaminaConFigurasJava2D extends JPanel {
 
     @Override
     public void paintComponent(Graphics g){

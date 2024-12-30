@@ -2,15 +2,15 @@ package Graficos.PruebaDibujoJava2D;
 
 import javax.swing.*;
 
-public class MarcoConDibujos extends JFrame{
+public class MarcoConDibujosJava2D extends JFrame{
 
-    public MarcoConDibujos(){
+    public MarcoConDibujosJava2D(){
 
         setTitle("Prueba de dibujo");
 
         setSize(400,400);
 
-        LaminaConFiguras miLamina = new LaminaConFiguras();
+        LaminaConFigurasJava2D miLamina = new LaminaConFigurasJava2D();
 
         add(miLamina);
 
