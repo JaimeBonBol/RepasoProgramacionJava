@@ -15,7 +15,7 @@ public class MainVehiculos {
             System.out.println("ELige una opción:");
             System.out.println("1. Anda con la bicicleta.");
             System.out.println("2. Haz el caballito con la bicicleta.");
-            System.out.println("3. Anda con el cohe.");
+            System.out.println("3. Anda con el coche.");
             System.out.println("4. Quema rueda con el coche.");
             System.out.println("5. Ver kilometraje de la bicicleta.");
             System.out.println("6. Ver kilometraje del coche,");
