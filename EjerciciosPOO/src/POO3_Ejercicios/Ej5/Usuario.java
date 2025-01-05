@@ -6,8 +6,8 @@ import java.util.List;
 public class Usuario {
 
     private String nombre;
-    private List<Usuario> listaAmigos;
-    private List<Publicacion> listaPublicaciones;
+    private ArrayList<Usuario> listaAmigos;
+    private ArrayList<Publicacion> listaPublicaciones;
 
     public Usuario(String nombre){
         this.nombre = nombre;
@@ -24,12 +24,38 @@ public class Usuario {
     }
 
 
-
     @Override
     public String toString() {
-        return"Nombre: "+this.nombre+
-        "Lista de amigos: "+listaAmigos+
-        "Lista de publicaciones: "+listaPublicaciones;
+        return this.nombre;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Nombre: "+this.nombre+
+                "\nLista de amigos: "+getListaAmigos()+
+                "\nLista de publicaciones: "+getListaPublicaciones());
+
+    }
+
+    public StringBuilder getListaAmigos() {
+        StringBuilder lista = new StringBuilder();
+        for (Usuario usuario : listaAmigos){
+            lista.append(usuario);
+            lista.append(", ");
+        }
+        return lista;
+    }
+
+    public StringBuilder getListaPublicaciones() {
+        StringBuilder lista = new StringBuilder();
+        for (Publicacion publicacion : listaPublicaciones){
+            lista.append(publicacion);
+            lista.append(", ");
+        }
+        return lista;
+    }
+
+    public void publicacionesAmigo(Usuario usuario){
+        System.out.println("Las publicaciones de su amig@ "+usuario.nombre+" son "+usuario.getListaPublicaciones());
 
     }
 }
