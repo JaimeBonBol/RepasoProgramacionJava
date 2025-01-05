@@ -40,5 +40,6 @@ public class Autobus extends Vehiculo{
         for (String parada : paradas){
             System.out.print(parada+" ");
         }
+        System.out.println();
     }
 }
