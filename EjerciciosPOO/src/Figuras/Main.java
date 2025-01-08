@@ -31,8 +31,11 @@ public class Main {
         System.out.println("PRUEBAS DIMENSIONES");
 
         System.out.println(dimension1);
+        System.out.println();
         System.out.println(dimension2);
+        System.out.println();
         System.out.println(dimension3);
+        System.out.println();
         System.out.println(dimension4);
 
         System.out.println();
@@ -51,14 +54,20 @@ public class Main {
         coleccion2.aniadirFigura(figura1);
         coleccion2.aniadirFigura(figura2);
 
+        System.out.println();
+
         System.out.println("La colección "+coleccion1.getNombreColeccion()+" contiene las siguientes figuras: "+coleccion1);
+        System.out.println();
         System.out.println("El valor de la colección "+coleccion1.getNombreColeccion()+" es:"+coleccion1.getValorColeccion());
+        System.out.println();
         System.out.println("El volumen de la colección "+coleccion1.getNombreColeccion()+" es:"+ coleccion1.getVolumenColeccion());
+        System.out.println();
         System.out.println("La figuras con capa en la colección "+coleccion1.getNombreColeccion()+" son: ");
         coleccion1.conCapa();
         System.out.println("La figura más valiosa en la colección "+coleccion1.getNombreColeccion()+" es: "+coleccion1.masValioso());
+        System.out.println();
         coleccion1.subirPrecio(100,"123ABC");
 
-        System.out.println("El valor de la colección después de haber subido el precio a una figura"+coleccion1.getNombreColeccion()+" es:"+coleccion1.getValorColeccion());
+        System.out.println("El valor de la colección después de haber subido el precio a una figura de la colección "+coleccion1.getNombreColeccion()+" es:"+coleccion1.getValorColeccion());
     }
 }

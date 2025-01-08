@@ -54,10 +54,9 @@ public class Coleccion {
             if (figura.codigo == id){
                 figura.precio +=cantidad;
                 System.out.println("Precio subido con éxito.");
-            }else {
-                System.out.println("La figura con el id "+id+" no está en la lista.");
             }
         }
+
     }
 
     /**
@@ -66,10 +65,11 @@ public class Coleccion {
      */
     @Override
     public String toString() {
+        StringBuilder sb = new StringBuilder();
         for (Figura figura : listaFiguras){
-            return figura.getSuperheroe().getNombre();
+            sb.append(figura.getSuperheroe().getNombre()+", ");
         }
-        return null;
+        return sb.toString();
     }
 
     /**
@@ -78,21 +78,22 @@ public class Coleccion {
     public void conCapa(){
         for (Figura figura : listaFiguras){
             if (figura.getSuperheroe().getCapa() == true){
-                System.out.println(figura.getSuperheroe().getNombre());
+                System.out.print(figura.getSuperheroe().getNombre()+" ");
             }
         }
+        System.out.println();
     }
 
-    public Figura masValioso(){
+    public String masValioso(){
         double valioso = 0;
-        Figura figuraValiosa = null;
+        String  figuraValiosa = "";
         for (Figura figura : listaFiguras){
             if (figura.precio > valioso){
                 valioso = figura.precio;
-                figuraValiosa = figura;
+                figuraValiosa = figura.getSuperheroe().getNombre();
             }
         }
-        return new Figura(figuraValiosa.codigo,figuraValiosa.precio,figuraValiosa.getDimensiones(),figuraValiosa.getSuperheroe());
+        return figuraValiosa;
     }
 
     /**

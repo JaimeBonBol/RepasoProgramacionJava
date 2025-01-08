@@ -95,10 +95,10 @@ public class Figura {
     @Override
     public String toString() {
         return "Figura:" +
-                "\nCodigo:" + codigo + '\'' +
-                ",\nPrecio:" + precio +
-                ",\nDimensiones:\n" + dimensiones.toString() +
-                ",\nSuperheroe:" + superheroe.getNombre()+"\n";
+                "\nCodigo:" + codigo +
+                "\nPrecio:" + precio +
+                "\nDimensiones:\n" + dimensiones.toString() +
+                "\nSuperheroe:" + superheroe.getNombre()+"\n";
     }
 
     /**
