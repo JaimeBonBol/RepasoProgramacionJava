@@ -23,6 +23,15 @@ public class Cereales implements EsAlimento{
         this.marca = marca;
         this.precio = precio;
         this.tipoCereal = tipoCereal;
+        if (this.tipoCereal.equalsIgnoreCase("espelta")){
+            this.calorias = 5;
+        } else if (this.tipoCereal.equalsIgnoreCase("maiz")) {
+            this.calorias = 8;
+        } else if (this.tipoCereal.equalsIgnoreCase("trigo")) {
+            this.calorias = 12;
+        }else {
+            this.calorias = 15;
+        }
     }
 
     /**
@@ -98,5 +107,19 @@ public class Cereales implements EsAlimento{
     @Override
     public int getCalorias() {
         return calorias;
+    }
+
+    /**
+     * Metodo toString para mostrar la información de la clase Cereales.
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Cereal" +
+                "\nMarca: " + marca +
+                "\nPrecio: " + precio +
+                "\nTipoCereal: " + tipoCereal +
+                "\nFechaCaducidad: " + fechaCaducidad +
+                "\nCalorias: " + calorias;
     }
 }

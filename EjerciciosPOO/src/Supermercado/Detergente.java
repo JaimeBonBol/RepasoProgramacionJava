@@ -78,7 +78,7 @@ public class Detergente implements ConDescuento{
      */
     @Override
     public double getPrecioDescuento() {
-        return this.precio - this.descuento;
+        return precio - (precio * descuento / 100);
     }
 
     /**
@@ -88,7 +88,8 @@ public class Detergente implements ConDescuento{
     @Override
     public String toString() {
         return "Detergente:" +
-                "\nMarca:" + marca +
-                "\nPrecio:" + precio;
+                "\nMarca: " + marca +
+                "\nPrecio: " + getPrecioDescuento() +
+                "\nDescuento: "+descuento;
     }
 }
