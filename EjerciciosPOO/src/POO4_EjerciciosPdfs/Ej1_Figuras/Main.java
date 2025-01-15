@@ -1,4 +1,4 @@
-package Figuras;
+package POO4_EjerciciosPdfs.Ej1_Figuras;
 
 public class Main {
     public static void main(String[] args) {

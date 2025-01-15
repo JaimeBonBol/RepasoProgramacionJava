@@ -1,4 +1,4 @@
-package Figuras;
+package POO4_EjerciciosPdfs.Ej1_Figuras;
 
 public class Superheroe {
 

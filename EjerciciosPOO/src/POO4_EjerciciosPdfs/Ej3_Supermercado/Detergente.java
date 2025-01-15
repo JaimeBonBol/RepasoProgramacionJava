@@ -1,4 +1,4 @@
-package Supermercado;
+package POO4_EjerciciosPdfs.Ej3_Supermercado;
 
 /**
  * Clase Detergente que implementa la interfaz ConDescuento.

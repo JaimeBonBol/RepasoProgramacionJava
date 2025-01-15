@@ -1,4 +1,4 @@
-package Supermercado;
+package POO4_EjerciciosPdfs.Ej3_Supermercado;
 
 public class Vino implements EsLiquido, ConDescuento{
 

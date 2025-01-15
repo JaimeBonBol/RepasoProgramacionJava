@@ -1,4 +1,4 @@
-package Electrodomesticos;
+package POO4_EjerciciosPdfs.Ej2_Electrodomesticos;
 
 public class Main {
     public static void main(String[] args) {

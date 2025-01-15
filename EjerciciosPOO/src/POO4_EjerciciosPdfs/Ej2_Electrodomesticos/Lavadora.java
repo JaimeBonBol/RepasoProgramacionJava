@@ -1,4 +1,4 @@
-package Electrodomesticos;
+package POO4_EjerciciosPdfs.Ej2_Electrodomesticos;
 
 public class Lavadora extends Electrodomestico{
 
