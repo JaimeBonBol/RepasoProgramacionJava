@@ -18,8 +18,6 @@ public class Lavadora extends Electrodomestico{
      */
     public Lavadora(String marca, double potencia){
         super("Lavadora",marca,potencia);
-        this.marca = marca;
-        this.potencia = potencia;
         this.aguaCaliente = false;
     }
 
@@ -34,9 +32,7 @@ public class Lavadora extends Electrodomestico{
      */
     public Lavadora(String marca, double precio, double potencia, boolean aguaCaliente){
         super("Lavadora",marca,potencia);
-        this.marca = marca;
         this.precio = precio;
-        this.potencia = potencia;
         this.aguaCaliente = aguaCaliente;
     }
 
