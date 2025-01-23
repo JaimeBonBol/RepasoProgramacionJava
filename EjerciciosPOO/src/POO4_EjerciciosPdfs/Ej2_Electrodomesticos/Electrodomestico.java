@@ -21,10 +21,10 @@ public class Electrodomestico {
         this.potencia = potencia;
     }
 
-    public Electrodomestico(String marca, double potencia){
+    /*public Electrodomestico(String marca, double potencia){
         this.marca = marca;
         this.potencia = potencia;
-    }
+    }*/
 
     /**
      * Metodo getter para obtener el valor de la variable tipo.

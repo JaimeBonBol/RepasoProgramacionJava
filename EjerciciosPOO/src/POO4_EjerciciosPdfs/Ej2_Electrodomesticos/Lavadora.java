@@ -13,23 +13,27 @@ public class Lavadora extends Electrodomestico{
      * También inicializa el modo de agua caliente en false.
      * @param marca
      * @param potencia
+     * Tambien se puede poner el tipo directamente en el super ya que sabemos que es una lavadora y no necesitaría crear otro constructor en Electrodomestico
+     * sin el tipo.
      */
     public Lavadora(String marca, double potencia){
-        super(marca,potencia);
+        super("Lavadora",marca,potencia);
         this.marca = marca;
         this.potencia = potencia;
         this.aguaCaliente = false;
     }
 
     /**
-     * Constructo de la clase Lavadora.
+     * Constructor de la clase Lavadora.
      * @param marca
      * @param precio
      * @param potencia
      * @param aguaCaliente
+     * Tambien se puede poner el tipo directamente en el super ya que sabemos que es una lavadora y no necesitaría crear otro constructor en Electrodomestico
+     * sin el tipo.
      */
     public Lavadora(String marca, double precio, double potencia, boolean aguaCaliente){
-        super(marca,potencia);
+        super("Lavadora",marca,potencia);
         this.marca = marca;
         this.precio = precio;
         this.potencia = potencia;
