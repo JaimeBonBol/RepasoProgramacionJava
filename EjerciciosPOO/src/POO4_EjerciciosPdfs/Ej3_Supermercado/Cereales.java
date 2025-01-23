@@ -23,15 +23,7 @@ public class Cereales implements EsAlimento{
         this.marca = marca;
         this.precio = precio;
         this.tipoCereal = tipoCereal;
-        if (this.tipoCereal.equalsIgnoreCase("espelta")){
-            this.calorias = 5;
-        } else if (this.tipoCereal.equalsIgnoreCase("maiz")) {
-            this.calorias = 8;
-        } else if (this.tipoCereal.equalsIgnoreCase("trigo")) {
-            this.calorias = 12;
-        }else {
-            this.calorias = 15;
-        }
+
     }
 
     /**
@@ -106,6 +98,15 @@ public class Cereales implements EsAlimento{
      */
     @Override
     public int getCalorias() {
+        if (this.tipoCereal.equalsIgnoreCase("espelta")){
+            this.calorias = 5;
+        } else if (this.tipoCereal.equalsIgnoreCase("maiz")) {
+            this.calorias = 8;
+        } else if (this.tipoCereal.equalsIgnoreCase("trigo")) {
+            this.calorias = 12;
+        }else {
+            this.calorias = 15;
+        }
         return calorias;
     }
 
@@ -120,6 +121,6 @@ public class Cereales implements EsAlimento{
                 "\nPrecio: " + precio +
                 "\nTipoCereal: " + tipoCereal +
                 "\nFechaCaducidad: " + fechaCaducidad +
-                "\nCalorias: " + calorias;
+                "\nCalorias: " + getCalorias();
     }
 }
