@@ -2,21 +2,21 @@ package POO4_EjerciciosPdfs.Ej2_Electrodomesticos;
 
 public class Main {
     public static void main(String[] args) {
-        Electrodomestico electrodomestico1 = new Electrodomestico("lavadora", "Bosch", 1000);
-        Electrodomestico electrodomestico2 = new Electrodomestico("Horno", "Lenovo", 1500);
+        Electrodomestico electrodomestico1 = new Electrodomestico("lavadora", "Bosch", 0.88);
+        Electrodomestico electrodomestico2 = new Electrodomestico("Horno", "Lenovo", 0.68);
         Electrodomestico electrodomestico3 = new Electrodomestico("Secadora", "Bosch", 2000);
 
-        Lavadora lavadora1 = new Lavadora("Balay", 1750);
-        Lavadora lavadora2 = new Lavadora("LG", 450, 1250, true);
+        Lavadora lavadora1 = new Lavadora("Balay", 0.75);
+        Lavadora lavadora2 = new Lavadora("LG", 450, 0.60, true);
         Lavadora lavadora3 = new Lavadora("Cecotec", 300, 700, false);
 
         int horasElectrodomestico1 = 2;
         int horasElectrodomestico2 = 6;
         int horasElectrodomestico3 = 4;
 
-        double costeçHoraElectrodomestico1 = 0.24;
-        double costeçHoraElectrodomestico2 = 0.64;
-        double costeçHoraElectrodomestico3 = 0.89;
+        double costeHoraElectrodomestico1 = 0.24;
+        double costeHoraElectrodomestico2 = 0.64;
+        double costeHoraElectrodomestico3 = 0.89;
 
         System.out.println("PRUEBAS ELECTRODOMESTICOS.");
         System.out.println();
@@ -33,9 +33,9 @@ public class Main {
 
 
         System.out.println();
-        System.out.println("El coste total por el consumo del electrodoméstico " + electrodomestico1.getTipo() + " de la marca " + electrodomestico1.getMarca() + " en " + horasElectrodomestico1 + " horas y con el precio de " + costeçHoraElectrodomestico1 + " euros por hora es de " + electrodomestico1.getCosteConsumo(horasElectrodomestico1, costeçHoraElectrodomestico1));
-        System.out.println("El coste total por el consumo del electrodoméstico " + electrodomestico2.getTipo() + " de la marca " + electrodomestico2.getMarca() + " en " + horasElectrodomestico2 + " horas y con el precio de " + costeçHoraElectrodomestico2 + " euros por hora es de " + electrodomestico2.getCosteConsumo(horasElectrodomestico2, costeçHoraElectrodomestico2));
-        System.out.println("El coste total por el consumo del electrodoméstico " + electrodomestico3.getTipo() + " de la marca " + electrodomestico3.getMarca() + " en " + horasElectrodomestico3 + " horas y con el precio de " + costeçHoraElectrodomestico3 + " euros por hora es de " + electrodomestico3.getCosteConsumo(horasElectrodomestico3, costeçHoraElectrodomestico3));
+        System.out.println("El coste total por el consumo del electrodoméstico " + electrodomestico1.getTipo() + " de la marca " + electrodomestico1.getMarca() + " en " + horasElectrodomestico1 + " horas y con el precio de " + costeHoraElectrodomestico1 + " euros por hora es de " + electrodomestico1.getCosteConsumo(horasElectrodomestico1, costeHoraElectrodomestico1));
+        System.out.println("El coste total por el consumo del electrodoméstico " + electrodomestico2.getTipo() + " de la marca " + electrodomestico2.getMarca() + " en " + horasElectrodomestico2 + " horas y con el precio de " + costeHoraElectrodomestico2 + " euros por hora es de " + electrodomestico2.getCosteConsumo(horasElectrodomestico2, costeHoraElectrodomestico2));
+        System.out.println("El coste total por el consumo del electrodoméstico " + electrodomestico3.getTipo() + " de la marca " + electrodomestico3.getMarca() + " en " + horasElectrodomestico3 + " horas y con el precio de " + costeHoraElectrodomestico3 + " euros por hora es de " + electrodomestico3.getCosteConsumo(horasElectrodomestico3, costeHoraElectrodomestico3));
 
 
         System.out.println();
