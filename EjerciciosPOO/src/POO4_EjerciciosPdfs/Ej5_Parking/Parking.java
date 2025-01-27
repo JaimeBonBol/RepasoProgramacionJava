@@ -37,7 +37,6 @@ public class Parking {
      * @param plaza
      */
     public void entrada(String matricula, int plaza){
-        System.out.println(matriculas.get(plaza-1));
         if (plaza <= 0 || plaza > matriculas.size()){
             throw new RuntimeException("La plaza introducida es errónea");
         }
@@ -58,66 +57,87 @@ public class Parking {
         if (plaza >= 0 && plaza< matriculas.size()){
             matriculas.set(plaza-1,matricula);
             System.out.println("Coche con matrícula "+matricula+" ha entrado en la plaza "+plaza);
-            System.out.println();
         }
-        System.out.println(matriculas.get(plaza-1));
     }
 
     /**
      * Metodo para la salida de un coche, si la matrícula no existe lanza un error.
      * @param matricula
      */
-    public void salida(String matricula){
+    public int salida(String matricula){
         if (matriculas.contains(matricula)){
             System.out.println("El coche con la matrícula "+matricula+" ha salido de la plaza "+(matriculas.indexOf(matricula)+1));
             matriculas.set((matriculas.indexOf(matricula)),null);
+            return (matriculas.indexOf(matricula)+1);
         }else {
             throw new RuntimeException("Matrícula no existente");
         }
     }
 
+    /**
+     * Metodo para obtener el total de plazas que tiene el parking.
+     * @return
+     */
     public int getPlazasTotales(){
         return matriculas.size();
     }
 
-    public void getMatriculas() {
+    /**
+     * Metodo para obtener las plazas ocupadas que tiene el parking.
+     * @return
+     */
+    public int getPlazasOcupadas(){
+        int contador = 0;
+        for (String matriculaPlaza : matriculas){
+            if (matriculaPlaza != null){
+                 contador ++;
+            }
+        }
+        return contador;
+    }
+
+    /**
+     * Metodo para obtener las plazas libres que tiene el parking.
+     * @return
+     */
+    public int getPlazasLibres(){
+        int contador = 0;
+        for (String matriculaPlaza : matriculas){
+            if (matriculaPlaza == null){
+                contador ++;
+            }
+        }
+        return contador;
+    }
+
+    /**
+     * Metodo para obtener las matrículas que hay en sus correspondientes plazas.
+     * @return
+     */
+    public String getMatriculas() {
+        StringBuilder cadena = new StringBuilder();
         int contador = 1;
         for (String plaza : matriculas){
-            System.out.println("Plaza "+contador+": "+plaza);
-            contador ++;
+            if (plaza == null){
+                cadena.append("Plaza "+contador+": "+"vacía\n");
+                contador ++;
+            }else {
+                cadena.append("Plaza "+contador+": "+plaza+"\n");
+                contador ++;
+            }
         }
+        return cadena.toString();
     }
 
-
-
-}
-
-class Main{
-    public static void main(String[] args) {
-        Parking parking = new Parking("Arabial",11);
-
-        parking.getMatriculas();
-
-        parking.entrada("1234QWE",1);
-
-        parking.getMatriculas();
-
-        parking.entrada("4623LTE",4);
-
-        parking.getMatriculas();
-
-        System.out.println();
-
-        parking.salida("4623LTE");
-
-        parking.getMatriculas();
-
-
-        parking.salida("1234QWE");
-
-        parking.getMatriculas();
-
-        System.out.println("El parking "+parking.getNombre()+" tiene "+ parking.getPlazasTotales()+" plazas.");
-
+    /**
+     * Metodo toString para mostrar la información del parking.
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Parking "+getNombre()+
+                "\n--------------------"+
+                "\n"+getMatriculas();
     }
+
 }
