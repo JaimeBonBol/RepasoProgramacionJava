@@ -26,42 +26,52 @@ public class Main {
             switch (opcion){
                 case 1:
 
-                    System.out.println("Introduzca matrícula para entrada: ");
-                    String matriculaentrada = entradaDatos.nextLine();
+                    try {
+                        System.out.println("Introduzca matrícula para entrada: ");
+                        String matriculaentrada = entradaDatos.nextLine();
 
-                    System.out.println("Introduce la plaza a la que desea ingresar: ");
-                    int plazaEntrada = entradaDatos.nextInt();
+                        System.out.println("Introduce la plaza a la que desea ingresar: ");
+                        int plazaEntrada = entradaDatos.nextInt();
 
-                    parking.entrada(matriculaentrada, plazaEntrada);
+                        parking.entrada(matriculaentrada, plazaEntrada);
 
-                    System.out.println();
+                        System.out.println();
 
-                    System.out.println("Número de plazas totales: "+parking.getPlazasTotales());
+                        System.out.println("Número de plazas totales: "+parking.getPlazasTotales());
 
-                    System.out.println("Número de plazas ocupadas: "+parking.getPlazasOcupadas());
+                        System.out.println("Número de plazas ocupadas: "+parking.getPlazasOcupadas());
 
-                    System.out.println("Número de plazas disponibles: "+parking.getPlazasLibres());
+                        System.out.println("Número de plazas disponibles: "+parking.getPlazasLibres());
 
-                    System.out.println();
+                        System.out.println();
+                        
+                    } catch (RuntimeException e) {
+                        System.out.println("Error: "+e.getMessage() );
+                    }
 
                     break;
 
                 case 2:
 
-                    System.out.println("Introduzca la matrícula para salida: ");
-                    String matriculaSalida = entradaDatos.nextLine();
+                    try {
+                        System.out.println("Introduzca la matrícula para salida: ");
+                        String matriculaSalida = entradaDatos.nextLine();
 
-                    parking.salida(matriculaSalida);
+                        parking.salida(matriculaSalida);
 
-                    System.out.println();
+                        System.out.println();
 
-                    System.out.println("Número de plazas totales: "+parking.getPlazasTotales());
+                        System.out.println("Número de plazas totales: "+parking.getPlazasTotales());
 
-                    System.out.println("Número de plazas ocupadas: "+parking.getPlazasOcupadas());
+                        System.out.println("Número de plazas ocupadas: "+parking.getPlazasOcupadas());
 
-                    System.out.println("Número de plazas disponibles: "+parking.getPlazasLibres());
+                        System.out.println("Número de plazas disponibles: "+parking.getPlazasLibres());
 
-                    System.out.println();
+                        System.out.println();
+
+                    } catch (RuntimeException e) {
+                        System.out.println("Error: "+e.getMessage());
+                    }
 
                     break;
 
