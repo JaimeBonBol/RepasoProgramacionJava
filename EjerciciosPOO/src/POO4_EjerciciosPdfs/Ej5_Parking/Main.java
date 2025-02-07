@@ -28,12 +28,12 @@ public class Main {
 
                     try {
                         System.out.println("Introduzca matrícula para entrada: ");
-                        String matriculaentrada = entradaDatos.nextLine();
+                        String matriculaEntrada = entradaDatos.nextLine();
 
                         System.out.println("Introduce la plaza a la que desea ingresar: ");
                         int plazaEntrada = entradaDatos.nextInt();
 
-                        parking.entrada(matriculaentrada, plazaEntrada);
+                        parking.entrada(matriculaEntrada, plazaEntrada);
 
                         System.out.println();
 
@@ -45,8 +45,8 @@ public class Main {
 
                         System.out.println();
                         
-                    } catch (RuntimeException e) {
-                        System.out.println("Error: "+e.getMessage() );
+                    } catch (ParkingException e) {
+                        System.out.println("Error: "+e.getMensaje() );
                     }
 
                     break;
@@ -69,8 +69,8 @@ public class Main {
 
                         System.out.println();
 
-                    } catch (RuntimeException e) {
-                        System.out.println("Error: "+e.getMessage());
+                    } catch (ParkingException e) {
+                        System.out.println("Error: "+e.getMensaje());
                     }
 
                     break;
