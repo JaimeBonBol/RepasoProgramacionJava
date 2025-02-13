@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class GestionInvetario {
     public static void main(String[] args) {
 
-        Inventario inventario1 = new Inventario();
+        Inventario inventarioTienda = new Inventario();
 
         //MENÚ.
 
@@ -30,6 +30,7 @@ public class GestionInvetario {
 
                     System.out.println("Introduce el nombre del producto: ");
                     String nombre = sc.nextLine();
+                    sc.nextLine();
 
                     System.out.println("Introduce el precio del producto: ");
                     int precio = sc.nextInt();
@@ -41,12 +42,12 @@ public class GestionInvetario {
                     System.out.println(producto.mostrarInformacion());
 
 
-                    inventario1.agregarProducto(producto);
+                    inventarioTienda.agregarProducto(producto);
 
                     break;
 
                 case 2:
-                    inventario1.mostrarInventario();
+                    inventarioTienda.mostrarInventario();
                     break;
 
                 case 3:
@@ -56,7 +57,7 @@ public class GestionInvetario {
                     System.out.println("Introduce la cantidad que se quiere vender: ");
                     int cantidadVender = sc.nextInt();
 
-                    inventario1.venderProducto(codigoVenta, cantidadVender);
+                    inventarioTienda.venderProducto(codigoVenta, cantidadVender);
                     break;
 
                 case 4:
