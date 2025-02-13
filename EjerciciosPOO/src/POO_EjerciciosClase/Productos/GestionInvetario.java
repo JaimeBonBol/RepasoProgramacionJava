@@ -29,18 +29,16 @@ public class GestionInvetario {
                     int codigo = sc.nextInt();
 
                     System.out.println("Introduce el nombre del producto: ");
-                    String nombre = sc.nextLine();
                     sc.nextLine();
+                    String nombre = sc.nextLine();
 
                     System.out.println("Introduce el precio del producto: ");
-                    int precio = sc.nextInt();
+                    double precio = Double.parseDouble(sc.nextLine());
 
                     System.out.println("Introduce la cantidad de unidades que hay en stock del producto: ");
                     int cantidadStock = sc.nextInt();
 
                     Producto producto = new Producto(codigo,nombre,precio,cantidadStock);
-                    System.out.println(producto.mostrarInformacion());
-
 
                     inventarioTienda.agregarProducto(producto);
 

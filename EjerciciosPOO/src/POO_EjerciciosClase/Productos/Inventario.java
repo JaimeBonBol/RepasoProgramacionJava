@@ -46,7 +46,7 @@ public class Inventario {
         for (Producto producto : productos){
             sb.append(producto.mostrarInformacion());
         }
-        System.out.println("El inventario tiene "+sb+"\n");
+        System.out.println("El inventario tiene: \n"+sb+"\n");
     }
 
     /**
