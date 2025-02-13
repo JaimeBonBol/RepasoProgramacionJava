@@ -1,6 +1,7 @@
 package POO4_EjerciciosPdfs.Ej5_Parking;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Parking {
 
@@ -21,6 +22,8 @@ public class Parking {
         for (int i = 0; i < numPlazas; i++) {
             matriculas.add(null);
         }
+
+        //this.matriculas = new ArrayList<>(Collections.nCopies(numPlazas,null));   También se puede hacer así con Collections.
     }
 
     /**
@@ -54,7 +57,7 @@ public class Parking {
                 throw new ParkingException("Matrícula repetida");
             }
         }
-        if (plaza >= 0 && plaza< matriculas.size()){
+        if (plaza > 0 && plaza< matriculas.size()){
             matriculas.set(plaza-1,matricula);
             System.out.println("Coche con matrícula "+matricula+" ha entrado en la plaza "+plaza);
         }
