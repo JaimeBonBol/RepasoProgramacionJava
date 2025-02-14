@@ -1,0 +1,10 @@
+@startuml
+class Coche {
+    - marca: string
+    - modelo: string
+    - año: int
+    + arrancar(): void
+    + frenar(): void
+    + acelerar(velocidad: int): void
+}
+@enduml
