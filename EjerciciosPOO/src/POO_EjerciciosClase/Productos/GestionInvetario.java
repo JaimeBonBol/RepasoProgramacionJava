@@ -29,6 +29,7 @@ public class GestionInvetario {
                     int codigo = sc.nextInt();
 
                     System.out.println("Introduce el nombre del producto: ");
+                    //Limpiar buffer
                     sc.nextLine();
                     String nombre = sc.nextLine();
 
