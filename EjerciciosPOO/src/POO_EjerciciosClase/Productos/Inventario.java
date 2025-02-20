@@ -45,6 +45,7 @@ public class Inventario {
         StringBuilder sb = new StringBuilder();
         for (Producto producto : productos){
             sb.append(producto.mostrarInformacion());
+            sb.append("----------------\n");
         }
         System.out.println("El inventario tiene: \n"+sb+"\n");
     }
