@@ -30,14 +30,26 @@ public class Estudiante {
 
     }
 
+    /**
+     * Getter para obtener el nombre del alumno.
+     * @return El nombre del alumno.
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Setter para modificar el nombre del alumno
+     * @param nombre Nuevo nombre del alumno.
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * Metodo para introducir calificaciones al alumno, donde te pregunta las materias que tiene y las diferentes
+     * evaluaciones y se debe de ir introducienod la nota de cada evaluación para su respectiva materia.
+     */
     public void inroducirCalificaciones(){
         String asignatura;
         String evaluacion;
@@ -62,6 +74,10 @@ public class Estudiante {
         }
     }
 
+    /**
+     * Metodo para mostrar las calificaciones en forma de tabla. Dandote de cada nota información sobre qué
+     * materia y evaluación es.
+     */
     public void mostrarCalificaciones(){
         int auxEvaluaciones = 0;
         System.out.println("Tabla de calificaciones de "+getNombre());
@@ -87,6 +103,10 @@ public class Estudiante {
         }
     }
 
+    /**
+     * Metodo para calcular el promedio del alumno por asignatura.
+     * @return
+     */
     public String calcularPromedioMaterias(){
         //Creo un array de doubles para luego devolverlo, de la longitud del array de calificaciones del alumno.
         double[] promedioMateria = new double[calificaciones.length];
@@ -118,5 +138,23 @@ public class Estudiante {
         return sb.toString();
     }
 
-    
+    /**
+     * Metodo para calcular el promedio general del alumno.
+     * @return Delvuel e un double con el promedio general del alumno.
+     */
+    public double promedioGeneral(){
+        //sumaTotal donde se almacenará la suma de todas las notas del alumno.
+        double sumaTotal = 0;
+        //promedioGeneral donde se almacenará el promedio total del alumno.
+        double promedioGeneral = 0;
+        for (int i = 0; i < numeroMaterias; i++) {
+            for (int j = 0; j < numeroEvaluaciones; j++) {
+                sumaTotal += calificaciones[i][j];
+            }
+        }
+        //EL promedio general del alumno será el total de las calificaciones del alumno dividido entre el número de materias por el número de evaluaciones.
+        promedioGeneral = sumaTotal / (numeroMaterias*numeroEvaluaciones);
+        return promedioGeneral;
+    }
+
 }
