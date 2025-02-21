@@ -57,12 +57,13 @@ public class Estudiante {
 
         //Filas.
         for (int i = 0; i < numeroMaterias; i++) {
+            //Para cada fila, que será una asignatura pregunta que asignatura quiere que sea.
             System.out.println("Introduce asignatura: ");
             asignatura =sc.nextLine();
             asignaturas.add(asignatura);
             //Columnas
             for (int j = 0; j < numeroEvaluaciones; j++) {
-
+                //para cada fila, que será cada evaluación, primero preguntará que tipo de evaluación es y después su calificación.
                 System.out.println("Introduce evaluación: ");
                 evaluacion = sc.nextLine();
                 evaluaciones.add(evaluacion);
@@ -82,6 +83,7 @@ public class Estudiante {
         int auxEvaluaciones = 0;
         System.out.println("Tabla de calificaciones de "+getNombre());
         //Comprobaciones
+        /*
         for (String asignatura : asignaturas){
             System.out.print(asignatura+ ", ");
         }
@@ -90,11 +92,12 @@ public class Estudiante {
             System.out.print(evaluacion+", ");
         }
         System.out.println();
+        */
 
         for (int i = 0; i < numeroMaterias; i++) {
-            //System.out.print(this.asignatura+": ");
             for (int j = 0; j < numeroEvaluaciones; j++) {
                 //System.out.println("\t\t\t"+this.evaluacion+"\t");
+                //Para cada calificación mpstrará información de la materia y su evaluación correspondiente.
                 System.out.print(asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
                 System.out.print(calificaciones[i][j]+"\t\t\t");
                 auxEvaluaciones ++;
@@ -142,7 +145,7 @@ public class Estudiante {
      * Metodo para calcular el promedio general del alumno.
      * @return Delvuel e un double con el promedio general del alumno.
      */
-    public double promedioGeneral(){
+    public double calcularPromedioGeneral(){
         //sumaTotal donde se almacenará la suma de todas las notas del alumno.
         double sumaTotal = 0;
         //promedioGeneral donde se almacenará el promedio total del alumno.
