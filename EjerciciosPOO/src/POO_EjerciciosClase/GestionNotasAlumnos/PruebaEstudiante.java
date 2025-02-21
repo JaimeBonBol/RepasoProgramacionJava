@@ -19,10 +19,13 @@ public class PruebaEstudiante {
 
         System.out.println("El promedio general del alumno "+estudiante1.getNombre()+" es de "+estudiante1.promedioGeneral());*/
 
+        //Instacion un gestor de calificaciones.
         GestorDeCalificaciones gestor =new GestorDeCalificaciones();
 
+        //Instacio un nuevo alumno mediante el gestor de calificaciones.
         Estudiante estudiante1 =  gestor.agregarEstudiante("Pepe Ruiz");
 
+        //Instacio un nuevo alumno mediante el gestor de calificaciones.
         Estudiante estudiante2 = gestor.agregarEstudiante("Juan Perez");
 
         System.out.println();
