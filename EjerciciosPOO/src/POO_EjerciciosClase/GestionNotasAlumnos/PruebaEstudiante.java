@@ -126,10 +126,16 @@ public class PruebaEstudiante {
 
                     case 5:
                         String estudianteAmostrar = JOptionPane.showInputDialog("Introduce el nombre del estudiante para mostrar sus calificaciones: ");
+                        boolean encontrado = false;
                         for (Estudiante e : gestor.listaEstudiantes){
                             if (e.getNombre().equalsIgnoreCase(estudianteAmostrar)){
                                 e.mostrarCalificaciones();
+                                encontrado = true;
+                                break;
                             }
+                        }
+                        if (!encontrado){
+                            JOptionPane.showMessageDialog(null, "El estudiante "+estudianteAmostrar+" no está registrado.");
                         }
                         break;
 
