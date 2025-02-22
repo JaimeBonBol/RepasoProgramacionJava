@@ -1,5 +1,6 @@
 package POO_EjerciciosClase.GestionNotasAlumnos;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class GestorDeCalificaciones {
     /**
      * Atributos de la clase Estudiante
      */
-    private ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
+    protected ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
 
     Scanner sc = new Scanner(System.in);
 
@@ -18,12 +19,14 @@ public class GestorDeCalificaciones {
      */
     public Estudiante agregarEstudiante(String nombre){
         //Almaceno cuantas materias tendrá el estudiante que las introducira el usuario.
-        System.out.println("Cuántas materias tiene el estudiante "+nombre+": ");
-        int materias = sc.nextInt();
+        /*System.out.println("Cuántas materias tiene el estudiante "+nombre+": ");
+        int materias = sc.nextInt();*/
+        int materias = Integer.parseInt(JOptionPane.showInputDialog("Cuántas materias tiene el estudiante "+nombre+": "));
 
         //Almaceno cuantas evaluaciones tendrá el estudiante que las introducira el usuario.
-        System.out.println("Cuántas evaluaciones tiene el estudiante "+nombre+": ");
-        int evaluaciones = sc.nextInt();
+        /*System.out.println("Cuántas evaluaciones tiene el estudiante "+nombre+": ");
+        int evaluaciones = sc.nextInt();*/
+        int evaluaciones = Integer.parseInt(JOptionPane.showInputDialog("Cuántas evaluaciones tiene el estudiante "+nombre+": "));
 
         //Instancio un nuevo estudiante con los datos que he recogido.
         Estudiante estudiante = new Estudiante(nombre, materias, evaluaciones);
@@ -33,7 +36,8 @@ public class GestorDeCalificaciones {
 
         //Agrego el estudiante a la lista de estudiantes.
         listaEstudiantes.add(estudiante);
-        System.out.println("Estudiante agregado con éxito.");
+        //System.out.println("Estudiante agregado con éxito.");
+        JOptionPane.showMessageDialog(null,"Estudiante agregado con éxito.");
 
         return estudiante;
     }
@@ -44,11 +48,15 @@ public class GestorDeCalificaciones {
      */
     public void comprobarPromedioGeneral(Estudiante estudiante){
         if (estudiante.calcularPromedioGeneral() < 5.0){
-            System.out.println("El promedio general del alumno es de "+estudiante.calcularPromedioGeneral());
-            System.out.println("MENSAJE DE ALERTA: Promedio general menor que 5.0");
+            //System.out.println("MENSAJE DE ALERTA: Promedio general del estdiiante "+estudiante.getNombre() +"menor que 5.0");
+            JOptionPane.showMessageDialog(null,"MENSAJE DE ALERTA: Promedio general del estudiante "+estudiante.getNombre() +" menor que 5.0");
         }else {
-            System.out.println("El promedio general del alumno es de "+estudiante.calcularPromedioGeneral());
+            JOptionPane.showMessageDialog(null,"No hay alerta para el estudiante "+estudiante.getNombre());
         }
+
+        /*else {
+            System.out.println("El promedio general del alumno es de "+estudiante.calcularPromedioGeneral());
+        }*/
     }
 
     public void mejorEstudiante(){
@@ -67,7 +75,8 @@ public class GestorDeCalificaciones {
         
         //En esa variable de tipo Estudiante auxiliar está por tanto el estudiante que mayor promedio tiene, por lo que 
         //muestro sus calificaciones.
-        System.out.println("El mejor estudiante es "+mejorEstudiante.getNombre());
+        //System.out.println("El mejor estudiante es "+mejorEstudiante.getNombre());
+        JOptionPane.showMessageDialog(null,"El mejor estudiante es "+mejorEstudiante.getNombre());
         mejorEstudiante.mostrarCalificaciones();
 
     }

@@ -1,5 +1,6 @@
 package POO_EjerciciosClase.GestionNotasAlumnos;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -53,23 +54,27 @@ public class Estudiante {
     public void inroducirCalificaciones(){
         String asignatura;
         String evaluacion;
+        double nota;
         Scanner sc = new Scanner(System.in);
 
         //Filas.
         for (int i = 0; i < numeroMaterias; i++) {
             //Para cada fila, que será una asignatura pregunta que asignatura quiere que sea.
-            System.out.println("Introduce asignatura: ");
-            asignatura =sc.nextLine();
+            /*System.out.println("Introduce asignatura: ");
+            asignatura =sc.nextLine();*/
+            asignatura = JOptionPane.showInputDialog("Introduce asignatura: ");
             asignaturas.add(asignatura);
             //Columnas
             for (int j = 0; j < numeroEvaluaciones; j++) {
                 //para cada fila, que será cada evaluación, primero preguntará que tipo de evaluación es y después su calificación.
-                System.out.println("Introduce evaluación: ");
-                evaluacion = sc.nextLine();
+                /*System.out.println("Introduce evaluación: ");
+                evaluacion = sc.nextLine();*/
+                evaluacion =JOptionPane.showInputDialog("Introduce evaluación: ");
                 evaluaciones.add(evaluacion);
-                System.out.println("Introduce nota para "+evaluacion+" de la asignatura "+asignatura+": ");
-                calificaciones[i][j]= Double.parseDouble(sc.nextLine());
-
+                /*System.out.println("Introduce nota para "+evaluacion+" de la asignatura "+asignatura+": ");
+                calificaciones[i][j]= Double.parseDouble(sc.nextLine());*/
+                nota = Double.parseDouble(JOptionPane.showInputDialog("Introduce nota para "+evaluacion+" de la asignatura "+asignatura+": "));
+                calificaciones[i][j]= nota;
 
             }
         }
@@ -81,7 +86,8 @@ public class Estudiante {
      */
     public void mostrarCalificaciones(){
         int auxEvaluaciones = 0;
-        System.out.println("Tabla de calificaciones de "+getNombre());
+        //System.out.println("Tabla de calificaciones de "+getNombre());
+        JOptionPane.showMessageDialog(null,"Tabla de calificaciones de "+getNombre());
         //Comprobaciones
         /*
         for (String asignatura : asignaturas){
@@ -98,8 +104,10 @@ public class Estudiante {
             for (int j = 0; j < numeroEvaluaciones; j++) {
                 //System.out.println("\t\t\t"+this.evaluacion+"\t");
                 //Para cada calificación mpstrará información de la materia y su evaluación correspondiente.
-                System.out.print(asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
-                System.out.print(calificaciones[i][j]+"\t\t\t");
+                /*System.out.print(asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
+                System.out.print(calificaciones[i][j]+"\t\t\t");*/
+                JOptionPane.showMessageDialog(null,asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
+                JOptionPane.showMessageDialog(null,calificaciones[i][j]+"\t\t\t");
                 auxEvaluaciones ++;
             }
             System.out.println();
@@ -110,7 +118,7 @@ public class Estudiante {
      * Metodo para calcular el promedio del alumno por asignatura.
      * @return
      */
-    public String calcularPromedioMaterias(){
+    public void calcularPromedioMaterias(){
         //Creo un array de doubles para luego devolverlo, de la longitud del array de calificaciones del alumno.
         double[] promedioMateria = new double[calificaciones.length];
 
@@ -138,7 +146,7 @@ public class Estudiante {
             sb.append("\n");
         }
 
-        return sb.toString();
+        JOptionPane.showMessageDialog(null,sb.toString());
     }
 
     /**
