@@ -42,13 +42,31 @@ public class GestorDeCalificaciones {
         return estudiante;
     }
 
+    public void eliminarEstudiante(String nombre){
+
+        boolean encontrado = false;
+
+        for (Estudiante estudiante : listaEstudiantes){
+            if (nombre.equalsIgnoreCase(estudiante.getNombre())){
+                listaEstudiantes.remove(estudiante);
+                System.out.println("Estudiante eliminado con éxito.");
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado){
+            System.out.println("EL estudiante "+nombre+ "no está registrado.");
+        }
+
+    }
+
     /**
      * Metodo para comprobar el promedio general y motrar una alerta en caso de que sea menor de 5.0
      * @param estudiante
      */
     public void comprobarPromedioGeneral(Estudiante estudiante){
         if (estudiante.calcularPromedioGeneral() < 5.0){
-            System.out.println("MENSAJE DE ALERTA: Promedio general del estudiante "+estudiante.getNombre() +"menor que 5.0");
+            System.out.println("MENSAJE DE ALERTA: Promedio general del estudiante "+estudiante.getNombre() +" menor que 5.0");
         }else {
             System.out.println("No hay alerta para el estudiante "+estudiante.getNombre());
         }
