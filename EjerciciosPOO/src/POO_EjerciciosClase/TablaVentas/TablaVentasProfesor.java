@@ -1,4 +1,4 @@
-package POO_EjerciciosClase;
+package POO_EjerciciosClase.TablaVentas;
 
 import java.util.Scanner;
 

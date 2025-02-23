@@ -1,4 +1,4 @@
-package POO_EjerciciosClase;
+package POO_EjerciciosClase.TablaVentas;
 
 public class Main {
     public static void main(String[] args) {
