@@ -48,10 +48,9 @@ public class GestorDeCalificaciones {
      */
     public void comprobarPromedioGeneral(Estudiante estudiante){
         if (estudiante.calcularPromedioGeneral() < 5.0){
-            //System.out.println("MENSAJE DE ALERTA: Promedio general del estdiiante "+estudiante.getNombre() +"menor que 5.0");
-            JOptionPane.showMessageDialog(null,"MENSAJE DE ALERTA: Promedio general del estudiante "+estudiante.getNombre() +" menor que 5.0");
+            System.out.println("MENSAJE DE ALERTA: Promedio general del estudiante "+estudiante.getNombre() +"menor que 5.0");
         }else {
-            JOptionPane.showMessageDialog(null,"No hay alerta para el estudiante "+estudiante.getNombre());
+            System.out.println("No hay alerta para el estudiante "+estudiante.getNombre());
         }
 
         /*else {
@@ -75,8 +74,7 @@ public class GestorDeCalificaciones {
         
         //En esa variable de tipo Estudiante auxiliar está por tanto el estudiante que mayor promedio tiene, por lo que 
         //muestro sus calificaciones.
-        //System.out.println("El mejor estudiante es "+mejorEstudiante.getNombre());
-        JOptionPane.showMessageDialog(null,"El mejor estudiante es "+mejorEstudiante.getNombre());
+        System.out.println("El mejor estudiante es "+mejorEstudiante.getNombre());
         mejorEstudiante.mostrarCalificaciones();
 
     }

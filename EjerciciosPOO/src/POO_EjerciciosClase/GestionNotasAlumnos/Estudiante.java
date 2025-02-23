@@ -86,8 +86,7 @@ public class Estudiante {
      */
     public void mostrarCalificaciones(){
         int auxEvaluaciones = 0;
-        //System.out.println("Tabla de calificaciones de "+getNombre());
-        JOptionPane.showMessageDialog(null,"Tabla de calificaciones de "+getNombre());
+        System.out.println("Tabla de calificaciones de "+getNombre());
         //Comprobaciones
         /*
         for (String asignatura : asignaturas){
@@ -104,10 +103,8 @@ public class Estudiante {
             for (int j = 0; j < numeroEvaluaciones; j++) {
                 //System.out.println("\t\t\t"+this.evaluacion+"\t");
                 //Para cada calificación mpstrará información de la materia y su evaluación correspondiente.
-                /*System.out.print(asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
-                System.out.print(calificaciones[i][j]+"\t\t\t");*/
-                JOptionPane.showMessageDialog(null,asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
-                JOptionPane.showMessageDialog(null,calificaciones[i][j]+"\t\t\t");
+                System.out.print(asignaturas.get(i)+", "+evaluaciones.get(auxEvaluaciones)+": ");
+                System.out.print(calificaciones[i][j]+"\t\t\t");
                 auxEvaluaciones ++;
             }
             System.out.println();
@@ -118,7 +115,7 @@ public class Estudiante {
      * Metodo para calcular el promedio del alumno por asignatura.
      * @return
      */
-    public void calcularPromedioMaterias(){
+    public String calcularPromedioMaterias(){
         //Creo un array de doubles para luego devolverlo, de la longitud del array de calificaciones del alumno.
         double[] promedioMateria = new double[calificaciones.length];
 
@@ -146,7 +143,7 @@ public class Estudiante {
             sb.append("\n");
         }
 
-        JOptionPane.showMessageDialog(null,sb.toString());
+        return sb.toString();
     }
 
     /**
