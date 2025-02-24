@@ -40,7 +40,7 @@ public class PruebaEstudiante {
 
 
             if (enter){
-                
+
                 opcion = Integer.parseInt(JOptionPane.showInputDialog("Que desea hacer, pulse su correspondiente número:" +
                         "\n1. Agregar estudiante." +
                         "\n2. Mostrar estudiantes en el gestor." +
