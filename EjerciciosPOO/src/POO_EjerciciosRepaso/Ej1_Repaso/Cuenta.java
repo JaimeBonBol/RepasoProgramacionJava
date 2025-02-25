@@ -1,4 +1,4 @@
-package POO_EjerciciosRepaso.Ej1_Cuenta;
+package POO_EjerciciosRepaso.Ej1_Repaso;
 
 public class Cuenta {
 
