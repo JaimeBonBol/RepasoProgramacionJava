@@ -6,21 +6,80 @@ public class MainPizzeria {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce el  nombre: ");
-        String nombre = sc.nextLine();
+        Pizzeria pizzeria = new Pizzeria("Pizza Marquilla");
 
-        System.out.println("Introduce el telefono: ");
-        int tlf = sc.nextInt();
+        int opcion;
 
-        System.out.println("Introduce el numero de ingredientes que desea: ");
-        int ingredientes = sc.nextInt();
+        do {
+            System.out.println("Menú Pizzería "+pizzeria.getNombre()
+            +"\nIntroduce una opción:" +
+                    "\n1. Inicializar pizzería." +
+                    "\n2. Agregar pedido." +
+                    "\n3. Eliminar pedido." +
+                    "\n4. Buscar pedido por nombre." +
+                    "\n5. Mostrar pedidos." +
+                    "\n6. Salir.");
 
-        Pedido pedido = new Pedido(nombre, tlf, ingredientes);
+            opcion = sc.nextInt();
 
-        Pizzeria pizzeria = new Pizzeria("Pizza Loca");
+            switch (opcion){
+                case 1:
+                    pizzeria.inicializarPizzeria();
+                    System.out.println();
+                    break;
 
-        pizzeria.agregarPedido(pedido);
+                case 2:
+                    System.out.println("Introduce el nombre: ");
+                    sc.nextLine();
+                    String nombre = sc.nextLine();
 
-        pizzeria.mostrarPedidos();
+                    System.out.println("Introduce el teléfono: ");
+                    int tlf = sc.nextInt();
+
+                    System.out.println("Introduce el número de ingredientes que desea: ");
+                    int ingredientes = sc.nextInt();
+
+                    Pedido pedido = new Pedido(nombre, tlf, ingredientes);
+
+                    pizzeria.agregarPedido(pedido);
+                    System.out.println();
+
+                    break;
+
+                case 3:
+                    System.out.println("Introduce el código de pedido para eliminarlo: ");
+                    int codEliminar = sc.nextInt();
+
+                    pizzeria.eliminarPedido(codEliminar);
+                    System.out.println();
+
+                    break;
+
+                case 4:
+                    System.out.println("Introduce nombre para buscar pedido: ");
+                    sc.nextLine();
+                    String nombrBuscar = sc.nextLine();
+
+                    pizzeria.buscarPedidoPorNombre(nombrBuscar);
+                    System.out.println();
+
+                    break;
+
+                case 5:
+                    System.out.println("Lista de pedidos: ");
+                    pizzeria.mostrarPedidos();
+                    System.out.println();
+                    break;
+
+                case 6:
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida.");
+                    break;
+            }
+        }while (opcion != 6);
+
     }
 }

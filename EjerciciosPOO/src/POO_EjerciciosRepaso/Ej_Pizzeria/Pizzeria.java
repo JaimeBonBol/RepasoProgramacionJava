@@ -24,6 +24,14 @@ public class Pizzeria {
         inicializarPizzeria();
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     /**
      * Metodo inicializarPIzzería que comprueba si esta llena la lista para vaciarla o no.
      */
@@ -35,6 +43,7 @@ public class Pizzeria {
             }
         }else {
             System.out.println("Bienvenido a la pizzería "+nombre);
+            System.out.println("Listo para comenzar.");
         }
     }
 
@@ -59,8 +68,13 @@ public class Pizzeria {
      * @param pedido
      */
     public void agregarPedido(Pedido pedido){
-        listaPedidos.add(pedido);
-        System.out.println("Pedido "+pedido.getCodigoPedido()+" agregado con éxito.");
+        if (!estaLLeno()){
+            listaPedidos.add(pedido);
+            System.out.println("Pedido "+pedido.getCodigoPedido()+" agregado con éxito.");
+        }else {
+            System.out.println("Lista de pedidos completa.");
+        }
+
     }
 
     /**
@@ -71,7 +85,7 @@ public class Pizzeria {
         for (Pedido pedido : listaPedidos){
             if (pedido.getCodigoPedido() == codigoPedidoEliminar){
                 listaPedidos.remove(pedido);
-                System.out.println("Pedido "+codigoPedidoEliminar+ "eliminado.");
+                System.out.println("Pedido "+codigoPedidoEliminar+ " eliminado.");
             }
         }
     }
@@ -99,6 +113,7 @@ public class Pizzeria {
     public void mostrarPedidos(){
         for (Pedido pedido : listaPedidos){
             System.out.println(pedido);
+            System.out.println();
         }
     }
 

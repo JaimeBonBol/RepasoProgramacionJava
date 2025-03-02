@@ -135,11 +135,7 @@ public class Pedido {
     }
 
     public String getIngredientes() {
-        StringBuilder sb =new StringBuilder();
-        for (int i = 0; i < ingredientes.length; i++) {
-            sb.append(i+", ");
-        }
-        return sb.toString();
+        return String.join(", ", ingredientes);
     }
 
     public void setIngredientes(String[] ingredientes) {
@@ -152,7 +148,7 @@ public class Pedido {
      */
     @Override
     public String toString() {
-        return "Pedido"+ getCodigoPedido()+
+        return "Pedido "+ getCodigoPedido()+
                 "\nNombre: "+getNombre()+
                 "\nTeléfono: "+getTelefono()+
                 "\nCódigo pedido: "+getCodigoPedido()+
