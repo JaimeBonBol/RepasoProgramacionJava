@@ -16,8 +16,10 @@ public class Movil extends Terminal {
 
         super.llamada(terminal, segundosLLamada);
 
-        conversacion += segundosLLamada;
-        terminal.conversacion += segundosLLamada;
+        //Con el super anterior llama al metodo llamada de la superclase, y lo realiza, por tanto no habría que
+        //volver a realizar la suma a la conversación.
+        /*conversacion += segundosLLamada;
+        terminal.conversacion += segundosLLamada;*/
 
         double minutos = (double) segundosLLamada / 60;
 
