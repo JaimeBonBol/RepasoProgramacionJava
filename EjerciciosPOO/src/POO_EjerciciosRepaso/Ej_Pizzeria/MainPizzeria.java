@@ -6,7 +6,7 @@ public class MainPizzeria {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Pizzeria pizzeria = new Pizzeria("Pizza Marquilla");
+        Pizzeria pizzeria = new Pizzeria("Pizza Loca");
 
         int opcion;
 
