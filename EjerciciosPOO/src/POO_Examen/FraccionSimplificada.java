@@ -41,7 +41,7 @@ public class FraccionSimplificada extends Fraccion{
     }
 
     @Override
-   public FraccionSimplificada suma(Fraccion fraccion) {
+    public FraccionSimplificada suma(Fraccion fraccion) {
         int numSuma = (this.num * fraccion.den) + (this.den * fraccion.num);
         int denSuma = (this.den * fraccion.den);
 
