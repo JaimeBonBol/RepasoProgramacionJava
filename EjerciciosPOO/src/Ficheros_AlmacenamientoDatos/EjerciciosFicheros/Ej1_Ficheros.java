@@ -1,4 +1,4 @@
-package Ficheros_AlmacenamientoDatos.Ejercicio1;
+package Ficheros_AlmacenamientoDatos.EjerciciosFicheros;
 
 /*
  Ejercicio 1: Crear y escribir en un archivo
@@ -10,9 +10,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Ejercicio1 {
+public class Ej1_Ficheros {
     public static void main(String[] args) {
-        String rutaArchivoEj1 = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/Ejercicio1/datos.txt";
+        String rutaArchivoEj1 = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/EjerciciosFicheros/datos.txt";
         File archivoEj1 = new File(rutaArchivoEj1);
 
         try{
