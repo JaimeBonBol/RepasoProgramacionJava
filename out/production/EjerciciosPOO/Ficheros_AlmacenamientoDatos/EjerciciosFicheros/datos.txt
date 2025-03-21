@@ -4,3 +4,5 @@ Estamos aprendiendo ficheros
 Estamos aprendiendo ficheros
 Estamos aprendiendo ficheros
 Estamos aprendiendo ficheros
+Hola, este es un nuevo texto
+Perteneciente al ejercicio 4 de ficheros
