@@ -1,16 +1,13 @@
 package Ficheros_AlmacenamientoDatos.EjerciciosFicheros;
 
-/*
- Ejercicio 5: Contar palabras en un archivo
- Crea un programa que cuente el número total de palabras en el archivo `datos.txt` y muestre el resultado en la consola.
- */
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
-public class Ej5_Ficheros {
+public class Ej5_Ficheros_Scanner {
     public static void main(String[] args) {
         /**
          * Variable donde guardo la ruta del archivo
@@ -31,12 +28,12 @@ public class Ej5_Ficheros {
             // Se va repitiendo mientras que no devuleva un null que siginifica que ha llegado al final de la línea.
             //Creo un array para guardar la línea dividida por cada espacio, y luego recorro ese array para contar cuantas palabras hay por línea.
             while ((linea = lector.readLine()) != null){
-                String[] palabrasPorLinea = linea.split(" ");
-                for (String palabra : palabrasPorLinea){
-                    if (!palabra.isEmpty()){
-                        cuentaPalabras ++;
-                    }
+                Scanner sc = new Scanner(linea);
+                while (sc.hasNextLine()){
+                    sc.next();
+                    cuentaPalabras ++;
                 }
+                sc.close();
             }
 
             System.out.println("En el documento "+archivo.getName()+" hay un total de "+cuentaPalabras+" palabras.");
