@@ -18,7 +18,8 @@ public class Ej9_Ficheros {
         File nuevoArchivo = new File(rutaNuevoArchivo);
 
         //Metodo para renombrar donde hay que pasarle un nuevo File que es por el que será reemplazado.
-        archivo.renameTo(nuevoArchivo);
-        System.out.println("Archivo "+archivo.getName()+" renombrado a "+nuevoArchivo.getName());
+        if (archivo.renameTo(nuevoArchivo)){
+            System.out.println("Archivo "+archivo.getName()+" renombrado a "+nuevoArchivo.getName());
+        }
     }
 }
