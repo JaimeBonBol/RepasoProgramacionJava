@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Ej7_Ficheros {
     public static void main(String[] args) {
         //Ruta del archivo y una instancia de tipo File con ese arhcivo por si quiero manejar nombre, etc de el.
-        String rutaArchivo = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/EjerciciosFicheros/datos.txt";
+        String rutaArchivo = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/EjerciciosFicheros/copia.txt";
         File archivo = new File(rutaArchivo);
         Scanner sc = new Scanner(System.in);
 
@@ -37,8 +37,10 @@ public class Ej7_Ficheros {
                 //Y se comprueba si en esa linea palabra por palabra si es la que buscamos, si es así
                 // incrementa la variable.
                 for (String palabra : texto){
-                    if (palabra.equalsIgnoreCase(PALABRA_BUSCADA)){
-                        cuentaPalabraBusada++;
+                    if (!palabra.isEmpty()){
+                        if (palabra.equalsIgnoreCase(PALABRA_BUSCADA)){
+                            cuentaPalabraBusada++;
+                        }
                     }
                 }
             }
