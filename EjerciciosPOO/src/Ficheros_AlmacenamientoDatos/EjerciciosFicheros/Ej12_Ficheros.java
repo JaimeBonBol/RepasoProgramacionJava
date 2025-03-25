@@ -19,9 +19,9 @@ public class Ej12_Ficheros {
 
                 for (String palabra : texto){
                     if (palabra.isEmpty()){
-                        System.out.printf("               ");
+                        System.out.printf("                         ");
                     }else{
-                        System.out.printf("%-15s", palabra);
+                        System.out.printf("%-25s", palabra);
 
                     }
                 }
