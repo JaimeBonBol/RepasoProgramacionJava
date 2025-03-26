@@ -1,0 +1,2 @@
+Trabajando con el paquete java.NIO, ficheros grandes, prueba de palabra con ñ: España
+prueba con palabra con acento: información
