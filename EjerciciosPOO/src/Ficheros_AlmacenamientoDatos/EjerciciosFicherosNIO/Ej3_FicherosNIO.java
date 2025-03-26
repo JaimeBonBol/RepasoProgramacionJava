@@ -21,6 +21,7 @@ public class Ej3_FicherosNIO {
                 System.out.println(linea);
             }
             //lineas.forEach(System.out::println);
+            //lineas.forEach(linea -> System.out.println(linea));
         } catch (IOException e) {
             System.out.println("ERror: "+e.getMessage());
         }
