@@ -13,9 +13,11 @@ public class Ej1_Ficheros {
 
         ArrayList<Integer> minMax = encontrarMaximoMinimo(rutaArchivo);
 
-        for (int elemento : minMax){
+        /*for (int elemento : minMax){
             System.out.println(elemento);
-        }
+        }*/
+        System.out.println("Máximo: "+ minMax.get(0));
+        System.out.println("Mínimo: "+ minMax.get(1));
     }
 
     public static ArrayList encontrarMaximoMinimo(String file){
