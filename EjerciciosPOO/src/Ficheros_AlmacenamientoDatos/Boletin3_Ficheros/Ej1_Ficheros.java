@@ -23,7 +23,7 @@ public class Ej1_Ficheros {
         ArrayList<Integer> retorno = new ArrayList<Integer>();
 
         try {
-            int maximo = 0;
+            int maximo = Integer.MIN_VALUE;
             int minimo = Integer.MAX_VALUE;
             List<String> lineas = Files.readAllLines(path);
             for (String linea : lineas){
