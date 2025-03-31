@@ -24,7 +24,7 @@ public class Ej1_Ficheros {
 
         try {
             int maximo = 0;
-            int minimo = 1000000000;
+            int minimo = Integer.MAX_VALUE;
             List<String> lineas = Files.readAllLines(path);
             for (String linea : lineas){
                 String[] numeros = linea.split(" ");
@@ -34,6 +34,7 @@ public class Ej1_Ficheros {
                     if (number > maximo){
                         maximo = number;
                     }
+                    minimo = number;
                     if (number < minimo){
                         minimo = number;
                     }
