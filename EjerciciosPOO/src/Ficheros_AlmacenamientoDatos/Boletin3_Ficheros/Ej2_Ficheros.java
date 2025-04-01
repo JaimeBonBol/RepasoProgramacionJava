@@ -46,7 +46,7 @@ public class Ej2_Ficheros {
                 notaMedia = sumaNotas / numNotas;
                 sb.append("Nombre: "+nombre+". Nota media: "+notaMedia);
 
-                System.out.println(listaOrdenada.size());
+                //System.out.println(listaOrdenada.size());
                 if (notaMedia >notaMediaMayor){
                     notaMediaMayor = notaMedia;
                     listaOrdenada.addFirst(sb.toString());
