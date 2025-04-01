@@ -29,12 +29,13 @@ public class Ej2_Ficheros {
             double notaMedia;
             int numNotas = 0;
             double notaMediaMayor = 0;
+            ArrayList<String> listaOrdenada = new ArrayList<>();
+
             while ((linea = lector.readLine()) != null){
                 String[] palabrasLinea = linea.split(" ");
 
                 //Para ordenar.
                 StringBuilder sb = new StringBuilder();
-                ArrayList<String> listaOrdenada = new ArrayList<>();
 
                 for (int i = 0; i < palabrasLinea.length; i++) {
                     nombre = palabrasLinea[0] + " "+ palabrasLinea[1];
@@ -45,18 +46,21 @@ public class Ej2_Ficheros {
                 }
                 notaMedia = sumaNotas / numNotas;
                 sb.append("Nombre: "+nombre+". Nota media: "+notaMedia);
+                //listaOrdenada.add(sb.toString());
+                //listaOrdenada.addFirst(sb.toString());
 
-                //System.out.println(listaOrdenada.size());
+                System.out.println(notaMediaMayor);
+                System.out.println(notaMedia);
                 if (notaMedia >notaMediaMayor){
                     notaMediaMayor = notaMedia;
                     listaOrdenada.addFirst(sb.toString());
                 }else {
                     listaOrdenada.add(sb.toString());
                 }
-                for (String elemento : listaOrdenada){
-                    System.out.println(elemento);
-                }
-                //System.out.println("Nombre: "+nombre+". Nota media: "+notaMedia);
+
+            }
+            for (String elemento : listaOrdenada){
+                System.out.println(elemento);
             }
 
 
