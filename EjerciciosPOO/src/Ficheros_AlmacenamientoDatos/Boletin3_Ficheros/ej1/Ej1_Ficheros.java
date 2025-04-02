@@ -1,4 +1,4 @@
-package Ficheros_AlmacenamientoDatos.Boletin3_Ficheros;
+package Ficheros_AlmacenamientoDatos.Boletin3_Ficheros.ej1;
 
 import java.io.*;
 import java.nio.file.Files;

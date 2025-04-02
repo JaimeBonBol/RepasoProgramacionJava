@@ -1,4 +1,4 @@
-package Ficheros_AlmacenamientoDatos.Boletin3_Ficheros;
+package Ficheros_AlmacenamientoDatos.Boletin3_Ficheros.Ej2;
 
 /*
 Ejercicio 2 - Notas de alumnos
@@ -12,8 +12,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class Ej2_Ficheros {
     public static void main(String[] args) {
