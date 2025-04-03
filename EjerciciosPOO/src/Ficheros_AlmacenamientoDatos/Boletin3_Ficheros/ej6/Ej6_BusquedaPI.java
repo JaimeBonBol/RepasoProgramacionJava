@@ -20,14 +20,17 @@ public class Ej6_BusquedaPI {
 
         String rutaArchivo = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/Boletin3_Ficheros/Documentos/pi-million.txt";
 
+
         System.out.println("Introduce un número de la longitud que quieras: ");
-        String patron = sc.nextLine();
+        String patron = sc.nextLine().trim();
 
         if (comprobarNmero(patron)){
             System.out.println("El número "+patron+" SI se encuentra en el documento.");
         }else {
             System.out.println("El número "+patron+" NO se encuentra en el documento.");
         }
+
+        conContain(patron);
     }
 
     public static boolean comprobarNmero(String patron){
@@ -42,12 +45,20 @@ public class Ej6_BusquedaPI {
         //Formateo para que divida una cadena de texto en partes, en este caso del tamaño de mi patrón, y lo almacene en un array.
         String[] documentoDividido = documento.split("(?<=\\G.{" + longitudPatron + "})");
 
+        for (int i = 0; i < documentoDividido.length; i++) {
+            if (documentoDividido[i].equals(patron)){
 
-        for (String elemento : documentoDividido){
-            if (elemento.equals(patron)){
                 return true;
             }
         }
+
+        /*for (String elemento : documentoDividido){
+            System.out.print(elemento+", ");
+            if (elemento.equals(patron)){
+                System.out.println();
+                return true;
+            }
+        }*/
         return false;
     }
 
@@ -62,12 +73,21 @@ public class Ej6_BusquedaPI {
                 sb.append(linea);
             }
 
-
         }catch (IOException e){
             System.out.println("Error al leer el archivo: "+e.getMessage());
         }
 
         return sb.toString();
 
+    }
+
+    public static void conContain(String patron){
+        String rutaArchivo = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/Boletin3_Ficheros/Documentos/pi-million.txt";
+
+        if (leerArchivo(rutaArchivo).contains(patron)){
+            System.out.println("Encontrado el num "+patron+" en la pos "+leerArchivo(rutaArchivo).indexOf(patron));
+        }else {
+            System.out.println("el número "+patron+" no aparece en el documento");
+        }
     }
 }
