@@ -17,7 +17,7 @@ import java.io.File;
 public class EjercicioB {
 
     public static void main(String[] args) {
-        String rutaDocumentos = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/EjercicioClase/EjercicioB/Documentos";
+        String rutaDocumentos = "EjerciciosPOO/src/Ficheros_AlmacenamientoDatos/EjercicioClase/Documentos";
 
         File f1 = new File(rutaDocumentos+"/Fotografias");
         File f2 = new File(rutaDocumentos+"/Libros");
@@ -55,7 +55,7 @@ public class EjercicioB {
             } else if (esDirectorio(f)) {
                 File[] elemento = f.listFiles();
                 for (File e : elemento){
-                    e.delete();
+                    borraTodo(e);
                 }
                 f.delete();
                 return true;
