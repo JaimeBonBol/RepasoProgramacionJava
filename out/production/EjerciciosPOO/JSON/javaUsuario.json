@@ -1,21 +1,3 @@
 [ {
   "nombre" : "Juan Martínez",
-  "email" : "juan@gmail.com",
-  "edad" : 0
-}, {
-  "nombre" : "Marta Pérez",
-  "email" : "marta@gmail.com",
-  "edad" : 0
-}, {
-  "nombre" : "Luisa Trigual",
-  "email" : "luisa@gmail.com",
-  "edad" : 0
-}, {
-  "nombre" : "Pepe Martin",
-  "email" : "pepe@gmail.com",
-  "edad" : 32
-}, {
-  "nombre" : "Luis Plaza",
-  "email" : "luis@gmail.com",
-  "edad" : 24
-} ]
+  "email" : "juan@gmail.com"

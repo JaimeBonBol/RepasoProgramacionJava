@@ -49,9 +49,16 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        String base = "Usuario{" +
                 "nombre='" + nombre + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+                ", email='" + email + '\'';
+
+        if (edad > 0) {
+            base += ", edad=" + edad;
+        }
+
+        base += '}';
+        return base;
     }
+
 }
