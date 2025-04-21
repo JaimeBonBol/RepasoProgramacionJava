@@ -1,1 +1,21 @@
-[{"nombre":"Juan Martínez","email":"juan@gmail.com"},{"nombre":"Marta Pérez","email":"marta@gmail.com"}]
+[ {
+  "nombre" : "Juan Martínez",
+  "email" : "juan@gmail.com",
+  "edad" : 0
+}, {
+  "nombre" : "Marta Pérez",
+  "email" : "marta@gmail.com",
+  "edad" : 0
+}, {
+  "nombre" : "Luisa Trigual",
+  "email" : "luisa@gmail.com",
+  "edad" : 0
+}, {
+  "nombre" : "Maria Ruz",
+  "email" : "maria@gmail.com",
+  "edad" : 23
+}, {
+  "nombre" : "Juan Ortiz",
+  "email" : "juan@gmail.com",
+  "edad" : 34
+} ]
