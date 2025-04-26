@@ -11,7 +11,7 @@ public class InsertarUsuario {
         try{
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Introdduce contraseña: ");
+            System.out.println("Introduce contraseña: ");
             String pass = sc.nextLine();
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud_demo", "root", pass);
