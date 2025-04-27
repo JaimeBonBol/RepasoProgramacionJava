@@ -109,7 +109,7 @@ public class GestorContactos {
     public static void buscarContacto(List<Contacto> contactos){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce el nombre del contacto a eliminar: ");
+        System.out.println("Introduce el nombre del contacto a buscar: ");
         String nombreBuscar = sc.nextLine();
 
         boolean encontradoBusqueda = false;
