@@ -1,0 +1,22 @@
+Microservicios:
+- Buscar producto
+- Añadir producto
+- Realizar pedido
+- Pagar
+- Recibir notificaciones
+
+Críticos:
+- Inventario
+- Login
+- Catálogo
+- Devoluciones
+- Pagos
+
+Secundarios:
+
+- Notificaciones
+- Facturación
+- Comentarios
+- Envíos
+- Carrito de compras
+
