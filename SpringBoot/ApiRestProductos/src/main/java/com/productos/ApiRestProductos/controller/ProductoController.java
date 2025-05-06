@@ -1,6 +1,8 @@
 package com.productos.ApiRestProductos.controller;
 
 import com.productos.ApiRestProductos.model.Producto;
+import com.productos.ApiRestProductos.repository.ProductoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -8,6 +10,9 @@ import java.util.List;
 
 @RestController
 public class ProductoController {
+
+    @Autowired
+    private ProductoRepository productoRepository;
 
     private List<Producto> productos = new ArrayList<>();
 
@@ -23,6 +28,11 @@ public class ProductoController {
     @GetMapping("/productos")
     public List<Producto> obtenerProductos() {
         return productos;
+    }
+
+    @GetMapping
+    public List<Producto> obtenerTodos(){
+        return productoRepository.findAll();
     }
 
     /**

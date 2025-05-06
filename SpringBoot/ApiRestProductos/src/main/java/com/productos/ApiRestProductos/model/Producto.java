@@ -1,8 +1,22 @@
 package com.productos.ApiRestProductos.model;
 
+import jakarta.persistence.*;
+
+/**
+ * @Entity: marca la clase como entidad JPA
+ * @Table(name = "Productos"): especifica el nombre de la tabla en la BD
+ * @Id: marca el campo id como clave primaria
+ * @generatedValue(strategy= GenerationType.IDENTITY): configura la generación automática del ID.
+ */
+
+@Entity
+@Table(name = "Productos")
 public class Producto {
 
-    protected int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Integer id;
+
     protected String nombre;
     protected double precio;
 
