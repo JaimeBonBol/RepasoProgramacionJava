@@ -1,0 +1,11 @@
+reserva_id,cliente,edad,origen,destino,aerolinea,vuelo,fecha_salida,fecha_regreso,clase,precio,asiento,equipaje,pasaporte,estado
+201,Luis Gómez,,,Nueva York,Iberia,IB6253,2024-06-15,2024-06-30,Economy,750.50,14A,1 maleta,X1234567,Confirmado
+202,María López,,Bogotá,París,Air France,AF345,2024-07-10,2024-07-25,Business,1350.99,3B,2 maletas,Y9876543,Confirmado
+203,Andrés Pérez,42,Buenos Aires,,American Airlines,AA843,2024-08-05,2024-08-20,Premium Economy,980.00,22C,1 maleta,Z6543219,Pendiente
+204,Sofía Martínez,31,México DF,Madrid,Aeroméxico,AM200,2024-09-12,2024-09-28,First Class,2200.75,1A,3 maletas,A4567891,Confirmado
+205,Carlos Torres,50,Lima,Santiago,LATAM,LA550,2024-05-20,2024-05-25,Economy,320.30,18D,1 maleta,B2345678,Cancelado
+206,Elena Fernández,26,Barcelona,Berlín,Lufthansa,LH876,2024-06-08,2024-06-22,Business,1450.60,5C,2 maletas,C8765432,Confirmado
+207,Roberto Méndez,39,Quito,Los Ángeles,United Airlines,UA789,2024-07-15,2024-07-30,Economy,670.99,27F,1 maleta,D3456789,Confirmado
+208,Clara Rojas,22,São Paulo,Londres,British Airways,BA120,2024-08-01,2024-08-15,Premium Economy,1100.40,12E,2 maletas,E7654321,Confirmado
+209,Daniel Ortega,45,Montevideo,Roma,Alitalia,AZ210,2024-09-05,2024-09-19,First Class,2500.00,2A,3 maletas,F2349876,Pendiente
+210,Lucía Ramírez,30,Caracas,Tokio,Japan Airlines,JL505,2024-10-10,2024-10-30,Economy,1350.75,30B,1 maleta,G5674321,Confirmado
