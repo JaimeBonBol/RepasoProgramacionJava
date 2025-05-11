@@ -1,0 +1,7 @@
+Bienvenido a el repaso, de ficheros!
+Bienvenido a el repaso. de ficheros!
+Nueva línea
+Este texo se agregará
+Con este salto de línea
+Con este salto de línea
+Con este salto de línea
