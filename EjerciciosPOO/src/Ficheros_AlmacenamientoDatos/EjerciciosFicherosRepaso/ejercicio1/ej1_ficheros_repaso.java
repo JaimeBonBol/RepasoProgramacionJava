@@ -54,7 +54,7 @@ public class ej1_ficheros_repaso {
             if (existeArchivo(archivo)){
                 BufferedWriter bw = new BufferedWriter(new FileWriter(archivo.getPath()));
 
-                bw.write("Bienvenido");
+                bw.write("Bienvenido!");
 
                 System.out.println("Escritura completada.");
                 bw.close();

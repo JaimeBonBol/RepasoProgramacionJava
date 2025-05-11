@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/apirestproductos/pom.xml" />
         <option value="$PROJECT_DIR$/ApiRestProductos/pom.xml" />
+        <option value="$PROJECT_DIR$/ApiRestCursos/pom.xml" />
       </list>
     </option>
   </component>
