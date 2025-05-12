@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EjerciciosPOO/EjerciciosPOO.iml" filepath="$PROJECT_DIR$/EjerciciosPOO/EjerciciosPOO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaExamenFicheros_alumnos/JavaExamenFicheros_alumnos.iml" filepath="$PROJECT_DIR$/JavaExamenFicheros_alumnos/JavaExamenFicheros_alumnos.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrimerosPasos/PrimerosPasos.iml" filepath="$PROJECT_DIR$/PrimerosPasos/PrimerosPasos.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RepasoProgramacionJava.iml" filepath="$PROJECT_DIR$/.idea/RepasoProgramacionJava.iml" />
     </modules>
